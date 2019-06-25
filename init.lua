@@ -24,7 +24,7 @@ core.register_chatcommand("nodeslist", {
 local number = 0
    local file = minetest.get_worldpath() .. "/nodes"
    local output = io.open(file, "w")
-   for name, item in pairs(minetest.registered_items) do
+   for name, item in pairs(minetest.registered_nodes) do
       number = number + 1
       output:write(name.."\n")
    end
